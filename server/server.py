@@ -5,7 +5,7 @@ import utils
 app = Flask(__name__)
 CORS(app)
 
-# Load the coach agent
+
 utils.load_saved_artifacts()
 
 

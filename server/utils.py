@@ -18,7 +18,7 @@ def load_saved_artifacts():
 
     llm = ChatGroq(api_key=groq_api_key, model="Gemma2-9b-It") ## temperature = 0
 
-    # Define required JSON fields (added grammar)
+   
     schemas = [
         ResponseSchema(name="opening", description="Feedback on introduction and hook"),
         ResponseSchema(name="content", description="Feedback on main ideas, examples, structure"),
@@ -31,7 +31,7 @@ def load_saved_artifacts():
     parser = StructuredOutputParser.from_response_schemas(schemas)
     
 
-    # Prompt with JSON schema enforcement
+   
     prompt = ChatPromptTemplate.from_messages([
         (
             "system",
