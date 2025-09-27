@@ -29,7 +29,7 @@ def load_saved_artifacts():
     ]
 
     parser = StructuredOutputParser.from_response_schemas(schemas)
-    format_instructions = parser.get_format_instructions()
+    
 
     # Prompt with JSON schema enforcement
     prompt = ChatPromptTemplate.from_messages([
